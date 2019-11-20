@@ -1,0 +1,10 @@
+<div class="outer-container">
+    <div class="img-container">
+        <img #image [src]=source crossorigin>
+    </div>
+    <div class="img-container">
+        <p class="img-type">Preview </p>
+        <img [id]="(dimension.height == 1440) ? 'canvas2' : 'canvas'" [src]="imageDestination" class="img-preview">
+    </div>               
+</div>
+<a href=''id="download-btn" mat-flat-button routerLink="." color="accent" (click)="download()">Save Cropped Image</a>

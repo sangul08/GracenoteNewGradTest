@@ -1,0 +1,16 @@
+<div class="heading-container">
+    <a class="back-link" mat-raised-button color="primary" [routerLink]="['']">Back</a>
+    <h2 class="crop-title">Cropping Options</h2>
+</div>
+
+<div class="container">
+        <div class="image-cropper-container">
+            <h2 class="option-title">Option 1 : 720 x 540</h2>
+            <app-image-cropper [src]=src [dimension]=dimension ></app-image-cropper>
+        </div>
+        <div class="image-cropper-container">
+            <h2 class="option-title">Option 2 : 960 x 1440</h2>
+            <app-image-cropper [src]=src [dimension]=dimension2 ></app-image-cropper>
+        </div>
+</div>
+    

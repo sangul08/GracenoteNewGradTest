@@ -1,0 +1,56 @@
+
+.img-type {
+    font-size: 16px;
+    font-weight: bolder;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+
+.cropper-container {
+    max-height: 300px !important;
+}
+
+.outer-container {
+    padding-left: 10px;
+    display:flex;
+    flex-direction: row;
+}
+
+.img-container {
+    width: 400px;
+    height: 300px;
+    float: left;
+}
+
+.img-preview {
+    width: 283px;
+    height: 212px;
+    float: left;
+    margin-left: 10px;
+}
+
+#canvas {
+    width: 300px;
+    height: 240px;
+}
+
+#canvas2 {
+    width: 200px;
+    height: 260px;
+}
+
+#download-btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 35px;
+    align-self: center;
+}
+
+#back-link {
+    text-align: center;
+    margin: auto;
+    border-width: 2px;
+}

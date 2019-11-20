@@ -1,0 +1,30 @@
+<div class="content" role="main">
+        <div class="work-list">
+            <h2>Click on the image for image details</h2>
+            <div class="list-item" *ngFor="let image of images" (click)="displayDetail([ image ])">
+                <img class="thumbnail" src = {{image.source}} />
+                <p class="thumbnail-text">{{ image.title }}</p>
+            </div>
+        </div>
+        <div class="image-details-container"  *ngIf="uploadedImage.source != ''">
+            <div *ngIf="uploadedImage.source != ''">
+                <img class="images" src = {{uploadedImage.source}} />
+                <div class="img-details" >
+                    <div class="outer">
+                        <div class="details-heading">PHOTO DETAILS</div>
+                        <div class="imgCropper">
+                            <a [routerLink]="['/image/' + uploadedImage.id]">Click to Crop Image</a>
+                        </div>
+                    </div>
+                    <p class="desc">Title : {{ uploadedImage.title}}</p>
+                    <p class="desc">Description</p>
+                    <p class="long-desc">{{ uploadedImage.description }}</p>
+                    <p class="desc">Cast</p>
+                    <ul class="cast" *ngFor="let cast of uploadedImage.cast | slice:0:3; let i=index">
+                        <li>{{ cast.name }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+<router-outlet></router-outlet>
